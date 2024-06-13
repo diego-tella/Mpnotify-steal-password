@@ -1,5 +1,5 @@
-# NpNotify-steal-password
-Loads a DLL to NpNotify and send the password to hacker's server. It is a modified version of nppspy where the malicious DLL send the password to the hacker's server.
+# Mpnotify-steal-password
+Loads a DLL to Mpnotify and send the password to hacker's server. It is a modified version of nppspy where the malicious DLL send the password to the hacker's server.
 
 # Compile
 ```
